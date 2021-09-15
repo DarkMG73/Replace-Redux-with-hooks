@@ -7,12 +7,14 @@ import ProductsProvider from "./context/products-context";
 import "./index.css";
 import App from "./App";
 import productReducer from "./store/reducers/products";
+import ConfigureProductsStore from "./hooks-store/products-store";
+
+ConfigureProductsStore();
 
 ReactDOM.render(
-  <ProductsProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ProductsProvider>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+
   document.getElementById("root")
 );
